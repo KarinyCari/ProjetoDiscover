@@ -17,7 +17,7 @@ body {
 
 :root {
     --text-color: #fff;
-    --bg-url: url(assets/bg-desktop.jpg);
+    --bg-url: url(assets/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --highlight-color-hover: rgba(255, 255, 255, 0.2);
@@ -26,7 +26,7 @@ body {
 }
 
 .light {
-    --bg-url: url(assets/bg-desktop-light.jpg);
+    --bg-url: url(assets/bg-mobile-light.jpg);
     --text-color: #000;
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.1);
@@ -38,8 +38,9 @@ body {
 body * {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
-
+    height: 100vh;
 }
+
 #container {
     width: 100%;
     max-width: 580px;
@@ -145,4 +146,15 @@ footer {
     padding: 24px;
     text-align: center;
     font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(assets/bg-desktop-light.jpg);
+    }
 }
